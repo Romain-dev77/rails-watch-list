@@ -1,4 +1,6 @@
 
+<h1 class="splash-regular"> Mes listes films </h1>
+
 
   <% @lists.each do |list| %>
 
@@ -8,9 +10,9 @@
     <div class="ms-2 me-auto">
       <div class="fw-bold"> <%= link_to list.name, list_path(list) %></div>
     </div>
-    <span class="badge text-bg-primary rounded-pill"><%= list.bookmarks.count %></span>
+    <span class="badge text-bg-secondary rounded-pill"><%= list.bookmarks.count %></span>
   </li>
 </ol>
   <% end %>
 
-<%= link_to "add a list", new_list_path() %>
+<%= link_to "add a list", new_list_path(), class:"btn btn-outline-primary" %>
